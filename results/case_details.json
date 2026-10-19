@@ -1,0 +1,1425 @@
+[
+  {
+    "query": "How many actions does each player take on their turn?",
+    "candidates": [
+      {
+        "chunk_id": 20,
+        "bi_rank": 1,
+        "bi_score": 0.5814000368118286
+      },
+      {
+        "chunk_id": 23,
+        "bi_rank": 2,
+        "bi_score": 0.352059006690979
+      },
+      {
+        "chunk_id": 14,
+        "bi_rank": 3,
+        "bi_score": 0.35150086879730225
+      },
+      {
+        "chunk_id": 18,
+        "bi_rank": 4,
+        "bi_score": 0.33888477087020874
+      },
+      {
+        "chunk_id": 21,
+        "bi_rank": 5,
+        "bi_score": 0.33799636363983154
+      },
+      {
+        "chunk_id": 28,
+        "bi_rank": 6,
+        "bi_score": 0.3308740258216858
+      },
+      {
+        "chunk_id": 22,
+        "bi_rank": 7,
+        "bi_score": 0.30550408363342285
+      },
+      {
+        "chunk_id": 19,
+        "bi_rank": 8,
+        "bi_score": 0.28163862228393555
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 9,
+        "bi_score": 0.2786772847175598
+      },
+      {
+        "chunk_id": 26,
+        "bi_rank": 10,
+        "bi_score": 0.25851014256477356
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 20,
+        "bi_rank": 1,
+        "bi_score": 0.5814000368118286,
+        "ce_score": 7.376795291900635,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 9,
+        "bi_score": 0.2786772847175598,
+        "ce_score": 3.7890591621398926,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 21,
+        "bi_rank": 5,
+        "bi_score": 0.33799636363983154,
+        "ce_score": 2.665759801864624,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 23,
+        "bi_rank": 2,
+        "bi_score": 0.352059006690979,
+        "ce_score": -1.036466360092163,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 18,
+        "bi_rank": 4,
+        "bi_score": 0.33888477087020874,
+        "ce_score": -3.8230137825012207,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 22,
+        "bi_rank": 7,
+        "bi_score": 0.30550408363342285,
+        "ce_score": -4.160370349884033,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 28,
+        "bi_rank": 6,
+        "bi_score": 0.3308740258216858,
+        "ce_score": -6.987273216247559,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 14,
+        "bi_rank": 3,
+        "bi_score": 0.35150086879730225,
+        "ce_score": -7.97670841217041,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 26,
+        "bi_rank": 10,
+        "bi_score": 0.25851014256477356,
+        "ce_score": -8.382298469543457,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 19,
+        "bi_rank": 8,
+        "bi_score": 0.28163862228393555,
+        "ce_score": -8.77291488647461,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      20,
+      23,
+      14
+    ],
+    "top3_p2": [
+      20,
+      53,
+      21
+    ],
+    "timings": {
+      "retrieval_ms": 57.90300000808202,
+      "rerank_ms": 11.942599987378344,
+      "llm_1_ms": 1790.7315000193194,
+      "llm_2_ms": 1571.848499996122
+    },
+    "answer_1": "Each player takes a total of 2 actions on their turn. Exception: During the first round of the Canal Era, each player performs only 1 action.",
+    "answer_1_tokens": 33,
+    "answer_2": "Each player takes a total of 2 actions on their turn. Exception: During the first round of the Canal Era, each player performs only 1 action.",
+    "answer_2_tokens": 33
+  },
+  {
+    "query": "Can I overbuild an opponent's brewery?",
+    "candidates": [
+      {
+        "chunk_id": 52,
+        "bi_rank": 1,
+        "bi_score": 0.4007279574871063
+      },
+      {
+        "chunk_id": 34,
+        "bi_rank": 2,
+        "bi_score": 0.39521366357803345
+      },
+      {
+        "chunk_id": 44,
+        "bi_rank": 3,
+        "bi_score": 0.3443140983581543
+      },
+      {
+        "chunk_id": 35,
+        "bi_rank": 4,
+        "bi_score": 0.3423907160758972
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 5,
+        "bi_score": 0.3130337595939636
+      },
+      {
+        "chunk_id": 41,
+        "bi_rank": 6,
+        "bi_score": 0.28712040185928345
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 7,
+        "bi_score": 0.2706261873245239
+      },
+      {
+        "chunk_id": 45,
+        "bi_rank": 8,
+        "bi_score": 0.2513587176799774
+      },
+      {
+        "chunk_id": 54,
+        "bi_rank": 9,
+        "bi_score": 0.23902836441993713
+      },
+      {
+        "chunk_id": 43,
+        "bi_rank": 10,
+        "bi_score": 0.23553185164928436
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 43,
+        "bi_rank": 10,
+        "bi_score": 0.23553185164928436,
+        "ce_score": 3.4035556316375732,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 34,
+        "bi_rank": 2,
+        "bi_score": 0.39521366357803345,
+        "ce_score": -2.060194492340088,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 52,
+        "bi_rank": 1,
+        "bi_score": 0.4007279574871063,
+        "ce_score": -7.998131275177002,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 54,
+        "bi_rank": 9,
+        "bi_score": 0.23902836441993713,
+        "ce_score": -9.405153274536133,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 41,
+        "bi_rank": 6,
+        "bi_score": 0.28712040185928345,
+        "ce_score": -10.492459297180176,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 45,
+        "bi_rank": 8,
+        "bi_score": 0.2513587176799774,
+        "ce_score": -11.112997055053711,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 35,
+        "bi_rank": 4,
+        "bi_score": 0.3423907160758972,
+        "ce_score": -11.22175407409668,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 5,
+        "bi_score": 0.3130337595939636,
+        "ce_score": -11.222782135009766,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 7,
+        "bi_score": 0.2706261873245239,
+        "ce_score": -11.253631591796875,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 44,
+        "bi_rank": 3,
+        "bi_score": 0.3443140983581543,
+        "ce_score": -11.274861335754395,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      52,
+      34,
+      44
+    ],
+    "top3_p2": [
+      43,
+      34,
+      52
+    ],
+    "timings": {
+      "retrieval_ms": 7.391099992673844,
+      "rerank_ms": 10.784199985209852,
+      "llm_1_ms": 1404.4610999990255,
+      "llm_2_ms": 2029.2420999903698
+    },
+    "answer_1": "The rulebook does not address the possibility of overbuilding an opponent's brewery. Therefore, based on the provided excerpts, this question cannot be answered.",
+    "answer_1_tokens": 31,
+    "answer_2": "No, you cannot overbuild an opponent's brewery. Overbuilding is only allowed for opponent-owned Coal Mines or Iron Works, as stated in Excerpt 1. Breweries are not listed as eligible industries for overbuilding.",
+    "answer_2_tokens": 46,
+    "case": "F1",
+    "category": "Negation & constraints (role limit)",
+    "evidence": [
+      "You may Overbuild only a Coal Mine or an Iron Works",
+      "Overbuild opponents’ Coal Mines/Iron Works"
+    ],
+    "probe": "The word 'brewery' pulls in beer/brewery chunks; the restriction on overbuilding opponents' tiles lives in the Overbuilding section.",
+    "expected": "No. An opponent's tile can only be overbuilt if it is a Coal Mine or an Iron Works, and only when no cubes of that resource remain anywhere on the board, including its Market.",
+    "gold": [
+      43,
+      53
+    ],
+    "gold_rank_p1": 10,
+    "gold_rank_p2": 1
+  },
+  {
+    "query": "What happens to level 1 industries at the end of the canal era?",
+    "candidates": [
+      {
+        "chunk_id": 56,
+        "bi_rank": 1,
+        "bi_score": 0.5247763395309448
+      },
+      {
+        "chunk_id": 42,
+        "bi_rank": 2,
+        "bi_score": 0.5205726623535156
+      },
+      {
+        "chunk_id": 51,
+        "bi_rank": 3,
+        "bi_score": 0.5167796015739441
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 4,
+        "bi_score": 0.47188353538513184
+      },
+      {
+        "chunk_id": 55,
+        "bi_rank": 5,
+        "bi_score": 0.45955362915992737
+      },
+      {
+        "chunk_id": 0,
+        "bi_rank": 6,
+        "bi_score": 0.44639313220977783
+      },
+      {
+        "chunk_id": 27,
+        "bi_rank": 7,
+        "bi_score": 0.42323848605155945
+      },
+      {
+        "chunk_id": 26,
+        "bi_rank": 8,
+        "bi_score": 0.3988311290740967
+      },
+      {
+        "chunk_id": 19,
+        "bi_rank": 9,
+        "bi_score": 0.39536306262016296
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 10,
+        "bi_score": 0.3688417673110962
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 27,
+        "bi_rank": 7,
+        "bi_score": 0.42323848605155945,
+        "ce_score": 6.869670391082764,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 55,
+        "bi_rank": 5,
+        "bi_score": 0.45955362915992737,
+        "ce_score": 4.340744495391846,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 26,
+        "bi_rank": 8,
+        "bi_score": 0.3988311290740967,
+        "ce_score": 4.281970977783203,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 19,
+        "bi_rank": 9,
+        "bi_score": 0.39536306262016296,
+        "ce_score": 2.249464750289917,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 56,
+        "bi_rank": 1,
+        "bi_score": 0.5247763395309448,
+        "ce_score": 0.8086347579956055,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 42,
+        "bi_rank": 2,
+        "bi_score": 0.5205726623535156,
+        "ce_score": -0.05602026358246803,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 4,
+        "bi_score": 0.47188353538513184,
+        "ce_score": -0.5507457256317139,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 51,
+        "bi_rank": 3,
+        "bi_score": 0.5167796015739441,
+        "ce_score": -4.768607139587402,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 0,
+        "bi_rank": 6,
+        "bi_score": 0.44639313220977783,
+        "ce_score": -5.187867641448975,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 10,
+        "bi_score": 0.3688417673110962,
+        "ce_score": -5.390431880950928,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      56,
+      42,
+      51
+    ],
+    "top3_p2": [
+      27,
+      55,
+      26
+    ],
+    "timings": {
+      "retrieval_ms": 5.6643999996595085,
+      "rerank_ms": 10.060899978270754,
+      "llm_1_ms": 3255.395199987106,
+      "llm_2_ms": 1849.6560000057798
+    },
+    "answer_1": "At the end of the Canal Era, level 1 industries remain on the board and can be upgraded or replaced during the Rail Era if you perform a Build action. However, if you do not build or develop at least one Coal Mine and one Iron Works during the Canal Era, you will need to use a Develop action during the Rail Era to clear these industries.",
+    "answer_1_tokens": 74,
+    "answer_2": "At the end of the Canal Era, all level 1 Industry tiles are removed from the board and returned to the box. Level 2 or greater Industry tiles remain on the board.",
+    "answer_2_tokens": 38,
+    "case": "F2",
+    "category": "Exceptions & corner cases",
+    "evidence": [
+      "Remove all level 1 Industry tiles from the board"
+    ],
+    "probe": "General Canal-Era building rules are lexically close; the specific end-of-era removal step is in a separate maintenance section.",
+    "expected": "They are removed from the board (not from Player Mats) and returned to the box; level 2+ tiles stay on the board.",
+    "gold": [
+      27
+    ],
+    "gold_rank_p1": 7,
+    "gold_rank_p2": 1
+  },
+  {
+    "query": "Does my income level give victory points at the end of the game?",
+    "candidates": [
+      {
+        "chunk_id": 24,
+        "bi_rank": 1,
+        "bi_score": 0.5774917602539062
+      },
+      {
+        "chunk_id": 57,
+        "bi_rank": 2,
+        "bi_score": 0.49268046021461487
+      },
+      {
+        "chunk_id": 30,
+        "bi_rank": 3,
+        "bi_score": 0.43889951705932617
+      },
+      {
+        "chunk_id": 46,
+        "bi_rank": 4,
+        "bi_score": 0.43691837787628174
+      },
+      {
+        "chunk_id": 17,
+        "bi_rank": 5,
+        "bi_score": 0.4185842275619507
+      },
+      {
+        "chunk_id": 55,
+        "bi_rank": 6,
+        "bi_score": 0.3671218156814575
+      },
+      {
+        "chunk_id": 19,
+        "bi_rank": 7,
+        "bi_score": 0.3633278012275696
+      },
+      {
+        "chunk_id": 25,
+        "bi_rank": 8,
+        "bi_score": 0.35762959718704224
+      },
+      {
+        "chunk_id": 28,
+        "bi_rank": 9,
+        "bi_score": 0.34493428468704224
+      },
+      {
+        "chunk_id": 45,
+        "bi_rank": 10,
+        "bi_score": 0.31155651807785034
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 55,
+        "bi_rank": 6,
+        "bi_score": 0.3671218156814575,
+        "ce_score": 3.8743183612823486,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 24,
+        "bi_rank": 1,
+        "bi_score": 0.5774917602539062,
+        "ce_score": 2.9332282543182373,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 57,
+        "bi_rank": 2,
+        "bi_score": 0.49268046021461487,
+        "ce_score": -0.07741450518369675,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 19,
+        "bi_rank": 7,
+        "bi_score": 0.3633278012275696,
+        "ce_score": -0.7462035417556763,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 46,
+        "bi_rank": 4,
+        "bi_score": 0.43691837787628174,
+        "ce_score": -2.959296464920044,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 17,
+        "bi_rank": 5,
+        "bi_score": 0.4185842275619507,
+        "ce_score": -4.662464618682861,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 28,
+        "bi_rank": 9,
+        "bi_score": 0.34493428468704224,
+        "ce_score": -7.098635196685791,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 30,
+        "bi_rank": 3,
+        "bi_score": 0.43889951705932617,
+        "ce_score": -9.216364860534668,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 45,
+        "bi_rank": 10,
+        "bi_score": 0.31155651807785034,
+        "ce_score": -10.90672492980957,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 25,
+        "bi_rank": 8,
+        "bi_score": 0.35762959718704224,
+        "ce_score": -11.387840270996094,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      24,
+      57,
+      30
+    ],
+    "top3_p2": [
+      55,
+      24,
+      57
+    ],
+    "timings": {
+      "retrieval_ms": 5.210500006796792,
+      "rerank_ms": 9.30289999814704,
+      "llm_1_ms": 3181.7079999891575,
+      "llm_2_ms": 1953.8147000130266
+    },
+    "answer_1": "No, your income level does not give victory points at the end of the game. According to Excerpt 2, income level gives victory points only in the introductory game, specifically as part of the Income level scoring rule, and only if the game is not the final round. In the full game, there is no mention of income level providing victory points at the end.",
+    "answer_1_tokens": 76,
+    "answer_2": "Yes, your income level gives victory points at the end of the game. According to the rulebook, you score VPs equal to your income level, and if your income level is negative, you lose VPs.",
+    "answer_2_tokens": 45,
+    "case": "F3",
+    "category": "Keyword trap / distractor",
+    "evidence": [
+      "income level at the end of the game is not worth VPs"
+    ],
+    "probe": "The introductory-variant chunk literally says 'Score VPs equal to your income level' (high lexical overlap) but does not apply to the full game; the true answer is a negated statement in Beginner Tips.",
+    "expected": "No. In the full game income level is not worth VPs (it only breaks ties). Only the introductory (Canal-Era-only) variant scores VPs equal to income level.",
+    "gold": [
+      55
+    ],
+    "gold_rank_p1": 6,
+    "gold_rank_p2": 1
+  },
+  {
+    "query": "What happens when the deck runs out of cards?",
+    "candidates": [
+      {
+        "chunk_id": 28,
+        "bi_rank": 1,
+        "bi_score": 0.43723103404045105
+      },
+      {
+        "chunk_id": 20,
+        "bi_rank": 2,
+        "bi_score": 0.3852100074291229
+      },
+      {
+        "chunk_id": 14,
+        "bi_rank": 3,
+        "bi_score": 0.36753249168395996
+      },
+      {
+        "chunk_id": 27,
+        "bi_rank": 4,
+        "bi_score": 0.33799031376838684
+      },
+      {
+        "chunk_id": 21,
+        "bi_rank": 5,
+        "bi_score": 0.3272551894187927
+      },
+      {
+        "chunk_id": 48,
+        "bi_rank": 6,
+        "bi_score": 0.29720765352249146
+      },
+      {
+        "chunk_id": 18,
+        "bi_rank": 7,
+        "bi_score": 0.2898314595222473
+      },
+      {
+        "chunk_id": 36,
+        "bi_rank": 8,
+        "bi_score": 0.27131983637809753
+      },
+      {
+        "chunk_id": 26,
+        "bi_rank": 9,
+        "bi_score": 0.2493748664855957
+      },
+      {
+        "chunk_id": 16,
+        "bi_rank": 10,
+        "bi_score": 0.23893839120864868
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 21,
+        "bi_rank": 5,
+        "bi_score": 0.3272551894187927,
+        "ce_score": -4.642575263977051,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 28,
+        "bi_rank": 1,
+        "bi_score": 0.43723103404045105,
+        "ce_score": -5.046053886413574,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 20,
+        "bi_rank": 2,
+        "bi_score": 0.3852100074291229,
+        "ce_score": -5.287954330444336,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 18,
+        "bi_rank": 7,
+        "bi_score": 0.2898314595222473,
+        "ce_score": -6.845829010009766,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 14,
+        "bi_rank": 3,
+        "bi_score": 0.36753249168395996,
+        "ce_score": -7.18869686126709,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 48,
+        "bi_rank": 6,
+        "bi_score": 0.29720765352249146,
+        "ce_score": -8.010062217712402,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 16,
+        "bi_rank": 10,
+        "bi_score": 0.23893839120864868,
+        "ce_score": -8.521793365478516,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 26,
+        "bi_rank": 9,
+        "bi_score": 0.2493748664855957,
+        "ce_score": -9.088262557983398,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 27,
+        "bi_rank": 4,
+        "bi_score": 0.33799031376838684,
+        "ce_score": -9.170243263244629,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 36,
+        "bi_rank": 8,
+        "bi_score": 0.27131983637809753,
+        "ce_score": -9.506649017333984,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      28,
+      20,
+      14
+    ],
+    "top3_p2": [
+      21,
+      28,
+      20
+    ],
+    "timings": {
+      "retrieval_ms": 6.870400015031919,
+      "rerank_ms": 9.419499983778223,
+      "llm_1_ms": 1697.0503999909852,
+      "llm_2_ms": 1608.5742999857757
+    },
+    "answer_1": "When the deck runs out of cards, the rounds continue until both the Draw Deck and players’ Hands are exhausted. After that, the Rail Era scoring is performed to determine the winner.",
+    "answer_1_tokens": 38,
+    "answer_2": "When the Draw Deck is exhausted, players' Hands decrease each round until they have no cards left. The era continues until both the Draw Deck and players’ Hands are exhausted.",
+    "answer_2_tokens": 36,
+    "case": "F4",
+    "category": "Keyword trap / synonyms",
+    "evidence": [
+      "Once the Draw Deck has been exhausted"
+    ],
+    "probe": "The rulebook says 'Draw Deck has been exhausted', not 'deck runs out'; the baseline drifts to other card/deck passages.",
+    "expected": "You stop refilling your hand, so hands shrink each round until empty; the era ends after the round in which all players play their last cards (after the Canal Era the discard piles are shuffled into a new Draw Deck).",
+    "gold": [
+      21
+    ],
+    "gold_rank_p1": 5,
+    "gold_rank_p2": 1
+  },
+  {
+    "query": "Is the general supply of cubes limited?",
+    "candidates": [
+      {
+        "chunk_id": 40,
+        "bi_rank": 1,
+        "bi_score": 0.3361862599849701
+      },
+      {
+        "chunk_id": 33,
+        "bi_rank": 2,
+        "bi_score": 0.3293665647506714
+      },
+      {
+        "chunk_id": 2,
+        "bi_rank": 3,
+        "bi_score": 0.326957643032074
+      },
+      {
+        "chunk_id": 39,
+        "bi_rank": 4,
+        "bi_score": 0.30927518010139465
+      },
+      {
+        "chunk_id": 15,
+        "bi_rank": 5,
+        "bi_score": 0.28300124406814575
+      },
+      {
+        "chunk_id": 16,
+        "bi_rank": 6,
+        "bi_score": 0.23794980347156525
+      },
+      {
+        "chunk_id": 43,
+        "bi_rank": 7,
+        "bi_score": 0.23703467845916748
+      },
+      {
+        "chunk_id": 32,
+        "bi_rank": 8,
+        "bi_score": 0.23567691445350647
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 9,
+        "bi_score": 0.21439974009990692
+      },
+      {
+        "chunk_id": 37,
+        "bi_rank": 10,
+        "bi_score": 0.21344204246997833
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 32,
+        "bi_rank": 8,
+        "bi_score": 0.23567691445350647,
+        "ce_score": -1.034115195274353,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 43,
+        "bi_rank": 7,
+        "bi_score": 0.23703467845916748,
+        "ce_score": -2.525850772857666,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 16,
+        "bi_rank": 6,
+        "bi_score": 0.23794980347156525,
+        "ce_score": -2.766376256942749,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 33,
+        "bi_rank": 2,
+        "bi_score": 0.3293665647506714,
+        "ce_score": -3.28542423248291,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 15,
+        "bi_rank": 5,
+        "bi_score": 0.28300124406814575,
+        "ce_score": -3.794961452484131,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 39,
+        "bi_rank": 4,
+        "bi_score": 0.30927518010139465,
+        "ce_score": -8.776034355163574,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 1,
+        "bi_score": 0.3361862599849701,
+        "ce_score": -9.671707153320312,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 9,
+        "bi_score": 0.21439974009990692,
+        "ce_score": -11.086387634277344,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 2,
+        "bi_rank": 3,
+        "bi_score": 0.326957643032074,
+        "ce_score": -11.133342742919922,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 37,
+        "bi_rank": 10,
+        "bi_score": 0.21344204246997833,
+        "ce_score": -11.451730728149414,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      40,
+      33,
+      2
+    ],
+    "top3_p2": [
+      32,
+      43,
+      16
+    ],
+    "timings": {
+      "retrieval_ms": 5.414199986262247,
+      "rerank_ms": 10.272600018652156,
+      "llm_1_ms": 2136.054200003855,
+      "llm_2_ms": 842.4457000219263
+    },
+    "answer_1": "Yes, the general supply of cubes is limited. The rulebook states there are 18 Iron cubes and 30 Coal cubes, and consumed iron cubes are placed back into the General Supply, implying the supply is finite and managed.",
+    "answer_1_tokens": 49,
+    "answer_2": "No, the general supply of cubes is not limited. The General Supply is limitless.",
+    "answer_2_tokens": 18,
+    "case": "F5",
+    "category": "Buried chunk (rank 4-10 → top-3)",
+    "evidence": [
+      "The General Supply is limitless"
+    ],
+    "probe": "The answer is a one-line note at the end of Board Setup; chunks about coal/iron cubes, markets and component counts rank higher.",
+    "expected": "No. The General Supply is limitless; if you run out of a resource, represent it with something else.",
+    "gold": [
+      16
+    ],
+    "gold_rank_p1": 6,
+    "gold_rank_p2": 3
+  },
+  {
+    "query": "Can my opponent use coal from my mine?",
+    "candidates": [
+      {
+        "chunk_id": 31,
+        "bi_rank": 1,
+        "bi_score": 0.5145983695983887
+      },
+      {
+        "chunk_id": 32,
+        "bi_rank": 2,
+        "bi_score": 0.5009439587593079
+      },
+      {
+        "chunk_id": 52,
+        "bi_rank": 3,
+        "bi_score": 0.4867572784423828
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 4,
+        "bi_score": 0.47963982820510864
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 5,
+        "bi_score": 0.4027407765388489
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 6,
+        "bi_score": 0.37917643785476685
+      },
+      {
+        "chunk_id": 56,
+        "bi_rank": 7,
+        "bi_score": 0.34622716903686523
+      },
+      {
+        "chunk_id": 43,
+        "bi_rank": 8,
+        "bi_score": 0.29743993282318115
+      },
+      {
+        "chunk_id": 15,
+        "bi_rank": 9,
+        "bi_score": 0.2690308690071106
+      },
+      {
+        "chunk_id": 21,
+        "bi_rank": 10,
+        "bi_score": 0.26125431060791016
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 43,
+        "bi_rank": 8,
+        "bi_score": 0.29743993282318115,
+        "ce_score": -1.2284417152404785,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 32,
+        "bi_rank": 2,
+        "bi_score": 0.5009439587593079,
+        "ce_score": -1.970473289489746,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 53,
+        "bi_rank": 4,
+        "bi_score": 0.47963982820510864,
+        "ce_score": -2.0625956058502197,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 56,
+        "bi_rank": 7,
+        "bi_score": 0.34622716903686523,
+        "ce_score": -4.717295169830322,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 31,
+        "bi_rank": 1,
+        "bi_score": 0.5145983695983887,
+        "ce_score": -5.634132385253906,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 5,
+        "bi_score": 0.4027407765388489,
+        "ce_score": -7.146941184997559,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 52,
+        "bi_rank": 3,
+        "bi_score": 0.4867572784423828,
+        "ce_score": -8.874415397644043,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 21,
+        "bi_rank": 10,
+        "bi_score": 0.26125431060791016,
+        "ce_score": -10.814050674438477,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 15,
+        "bi_rank": 9,
+        "bi_score": 0.2690308690071106,
+        "ce_score": -11.024982452392578,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 6,
+        "bi_score": 0.37917643785476685,
+        "ce_score": -11.103700637817383,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      31,
+      32,
+      52
+    ],
+    "top3_p2": [
+      43,
+      32,
+      53
+    ],
+    "timings": {
+      "retrieval_ms": 6.531399994855747,
+      "rerank_ms": 10.164899984374642,
+      "llm_1_ms": 2940.827500016894,
+      "llm_2_ms": 2758.3855999982916
+    },
+    "answer_1": "Yes, your opponent can use coal from your mine because the rule states that coal can be consumed from \"the closest (fewest Link tiles distant) connected unflipped Coal Mine F (owned by any player).\" This means any player, including opponents, can access coal from a mine they own or that is connected to their network.",
+    "answer_1_tokens": 68,
+    "answer_2": "No, your opponent cannot use coal from your mine. According to the rules, only players who are connected to a Coal Mine can purchase coal from the Coal Market, and coal from a mine belongs to the owner of that mine. Since your opponent does not own the mine, they cannot access or use coal from it.",
+    "answer_2_tokens": 65,
+    "case": "L1",
+    "category": "Limitation: re-ranker demotes the right chunk",
+    "evidence": [
+      "connected unflipped Coal Mine"
+    ],
+    "probe": "The answer is the phrase '(owned by any player)' inside the Consuming Coal rules.",
+    "expected": "Yes. Coal is consumed (for free) from the closest connected unflipped Coal Mine, owned by any player.",
+    "gold": [
+      31
+    ],
+    "gold_rank_p1": 1,
+    "gold_rank_p2": 5
+  },
+  {
+    "query": "What do I get for selling to Warrington with beer?",
+    "candidates": [
+      {
+        "chunk_id": 34,
+        "bi_rank": 1,
+        "bi_score": 0.5984809994697571
+      },
+      {
+        "chunk_id": 44,
+        "bi_rank": 2,
+        "bi_score": 0.5801569223403931
+      },
+      {
+        "chunk_id": 15,
+        "bi_rank": 3,
+        "bi_score": 0.4876195192337036
+      },
+      {
+        "chunk_id": 52,
+        "bi_rank": 4,
+        "bi_score": 0.483497679233551
+      },
+      {
+        "chunk_id": 45,
+        "bi_rank": 5,
+        "bi_score": 0.4797227680683136
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 6,
+        "bi_score": 0.4752159118652344
+      },
+      {
+        "chunk_id": 32,
+        "bi_rank": 7,
+        "bi_score": 0.4177609086036682
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 8,
+        "bi_score": 0.4065132141113281
+      },
+      {
+        "chunk_id": 22,
+        "bi_rank": 9,
+        "bi_score": 0.4024697542190552
+      },
+      {
+        "chunk_id": 2,
+        "bi_rank": 10,
+        "bi_score": 0.3781571686267853
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 15,
+        "bi_rank": 3,
+        "bi_score": 0.4876195192337036,
+        "ce_score": -2.1720130443573,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 44,
+        "bi_rank": 2,
+        "bi_score": 0.5801569223403931,
+        "ce_score": -3.1353883743286133,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 34,
+        "bi_rank": 1,
+        "bi_score": 0.5984809994697571,
+        "ce_score": -4.202461242675781,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 22,
+        "bi_rank": 9,
+        "bi_score": 0.4024697542190552,
+        "ce_score": -4.456058502197266,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 32,
+        "bi_rank": 7,
+        "bi_score": 0.4177609086036682,
+        "ce_score": -4.874286651611328,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 45,
+        "bi_rank": 5,
+        "bi_score": 0.4797227680683136,
+        "ce_score": -5.51082706451416,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 52,
+        "bi_rank": 4,
+        "bi_score": 0.483497679233551,
+        "ce_score": -8.655391693115234,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 8,
+        "bi_score": 0.4065132141113281,
+        "ce_score": -10.590066909790039,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 38,
+        "bi_rank": 6,
+        "bi_score": 0.4752159118652344,
+        "ce_score": -10.75982666015625,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 2,
+        "bi_rank": 10,
+        "bi_score": 0.3781571686267853,
+        "ce_score": -11.396039009094238,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      34,
+      44,
+      15
+    ],
+    "top3_p2": [
+      15,
+      44,
+      34
+    ],
+    "timings": {
+      "retrieval_ms": 5.482599983224645,
+      "rerank_ms": 10.139499994693324,
+      "llm_1_ms": 1819.9938999896403,
+      "llm_2_ms": 3703.1672000011895
+    },
+    "answer_1": "In a 2-player game, no Merchant tiles are placed in Warrington, so you cannot sell to Warrington. Therefore, you get nothing for selling to Warrington with beer.",
+    "answer_1_tokens": 41,
+    "answer_2": "The rulebook does not specify any special reward or bonus for selling to Warrington with beer. It only states that you may consume beer from the space beside the Merchant tile you are selling to and that you may collect a Merchant beer bonus (see “Merchant Beer Bonuses”), but no details about Warrington's specific bonus are provided. Therefore, the exact reward for selling to Warrington with beer is not specified in the excerpts.",
+    "answer_2_tokens": 90,
+    "case": "L2",
+    "category": "Limitation: first-stage recall miss",
+    "evidence": [
+      "Money (Warrington)"
+    ],
+    "probe": "The answer is a one-line bullet in the Merchant Beer Bonuses list; if it is not in the top-10, re-ranking cannot recover it.",
+    "expected": "Consuming Warrington's merchant beer during a Sell action gives the Money bonus: £5 from the Bank.",
+    "gold": [
+      46
+    ],
+    "gold_rank_p1": null,
+    "gold_rank_p2": null
+  },
+  {
+    "query": "Can I upgrade a factory to a better one?",
+    "candidates": [
+      {
+        "chunk_id": 42,
+        "bi_rank": 1,
+        "bi_score": 0.25799936056137085
+      },
+      {
+        "chunk_id": 55,
+        "bi_rank": 2,
+        "bi_score": 0.22622200846672058
+      },
+      {
+        "chunk_id": 51,
+        "bi_rank": 3,
+        "bi_score": 0.20573389530181885
+      },
+      {
+        "chunk_id": 37,
+        "bi_rank": 4,
+        "bi_score": 0.20288649201393127
+      },
+      {
+        "chunk_id": 43,
+        "bi_rank": 5,
+        "bi_score": 0.19701988995075226
+      },
+      {
+        "chunk_id": 4,
+        "bi_rank": 6,
+        "bi_score": 0.19286701083183289
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 7,
+        "bi_score": 0.18986253440380096
+      },
+      {
+        "chunk_id": 3,
+        "bi_rank": 8,
+        "bi_score": 0.1844838559627533
+      },
+      {
+        "chunk_id": 56,
+        "bi_rank": 9,
+        "bi_score": 0.17807269096374512
+      },
+      {
+        "chunk_id": 30,
+        "bi_rank": 10,
+        "bi_score": 0.17348439991474152
+      }
+    ],
+    "reranked": [
+      {
+        "chunk_id": 30,
+        "bi_rank": 10,
+        "bi_score": 0.17348439991474152,
+        "ce_score": -10.669958114624023,
+        "ce_rank": 1
+      },
+      {
+        "chunk_id": 43,
+        "bi_rank": 5,
+        "bi_score": 0.19701988995075226,
+        "ce_score": -10.734196662902832,
+        "ce_rank": 2
+      },
+      {
+        "chunk_id": 4,
+        "bi_rank": 6,
+        "bi_score": 0.19286701083183289,
+        "ce_score": -10.977773666381836,
+        "ce_rank": 3
+      },
+      {
+        "chunk_id": 56,
+        "bi_rank": 9,
+        "bi_score": 0.17807269096374512,
+        "ce_score": -11.167535781860352,
+        "ce_rank": 4
+      },
+      {
+        "chunk_id": 3,
+        "bi_rank": 8,
+        "bi_score": 0.1844838559627533,
+        "ce_score": -11.175289154052734,
+        "ce_rank": 5
+      },
+      {
+        "chunk_id": 42,
+        "bi_rank": 1,
+        "bi_score": 0.25799936056137085,
+        "ce_score": -11.217369079589844,
+        "ce_rank": 6
+      },
+      {
+        "chunk_id": 55,
+        "bi_rank": 2,
+        "bi_score": 0.22622200846672058,
+        "ce_score": -11.249401092529297,
+        "ce_rank": 7
+      },
+      {
+        "chunk_id": 37,
+        "bi_rank": 4,
+        "bi_score": 0.20288649201393127,
+        "ce_score": -11.310796737670898,
+        "ce_rank": 8
+      },
+      {
+        "chunk_id": 51,
+        "bi_rank": 3,
+        "bi_score": 0.20573389530181885,
+        "ce_score": -11.35467529296875,
+        "ce_rank": 9
+      },
+      {
+        "chunk_id": 40,
+        "bi_rank": 7,
+        "bi_score": 0.18986253440380096,
+        "ce_score": -11.399578094482422,
+        "ce_rank": 10
+      }
+    ],
+    "top3_p1": [
+      42,
+      55,
+      51
+    ],
+    "top3_p2": [
+      30,
+      43,
+      4
+    ],
+    "timings": {
+      "retrieval_ms": 5.515600001672283,
+      "rerank_ms": 9.439899993594736,
+      "llm_1_ms": 1872.8915000101551,
+      "llm_2_ms": 1343.5670000035316
+    },
+    "answer_1": "Yes, you can upgrade a factory to a better one. Overbuilding allows you to replace an already placed Industry tile with a higher-level tile of the same industry type, as long as you pay the necessary build costs.",
+    "answer_1_tokens": 45,
+    "answer_2": "The rulebook does not provide information about upgrading a factory to a better one. Therefore, based on the given excerpts, the answer is unknown.",
+    "answer_2_tokens": 30,
+    "case": "L3",
+    "category": "Limitation: low-confidence re-ranking",
+    "evidence": [
+      "Sometimes you are allowed to replace an already placed Industry tile",
+      "This is known as Overbuilding"
+    ],
+    "probe": "The game term is 'Overbuilding': its definition ends chunk 42 and its conditions start chunk 43. The query shares almost no words with either, and all ten cross-encoder logits are low.",
+    "expected": "Yes, by Overbuilding: replace a placed Industry tile with a higher-level tile of the same industry, paying its cost. Any of your own tiles can be overbuilt; an opponent's only if it is a Coal Mine/Iron Works and no such cubes remain on the board or Market. The replaced tile is removed from the game.",
+    "gold": [
+      42,
+      43
+    ],
+    "gold_rank_p1": 1,
+    "gold_rank_p2": 2
+  }
+]

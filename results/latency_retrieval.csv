@@ -1,0 +1,11 @@
+device,stage,mean,median,p95
+CUDA,query_embedding,4.61,4.26,6.57
+CPU,query_embedding,8.28,8.21,8.91
+CUDA,faiss_search,0.03,0.02,0.03
+CPU,faiss_search,0.03,0.03,0.03
+CUDA,pipeline_1_retrieval,4.64,4.28,6.6
+CPU,pipeline_1_retrieval,8.31,8.24,8.94
+CUDA,cross_encoder_10_pairs,9.97,9.65,11.61
+CPU,cross_encoder_10_pairs,96.57,92.03,115.71
+CUDA,pipeline_2_retrieval,14.61,14.24,17.74
+CPU,pipeline_2_retrieval,104.88,100.44,124.75

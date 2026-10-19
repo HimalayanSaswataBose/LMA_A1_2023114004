@@ -1,0 +1,15 @@
+# Tested with Python 3.13 on Windows 11 with an NVIDIA RTX 5060 Ti (torch 2.8.0 CUDA 12.9 build).
+# With a GPU, install the CUDA build of torch first, e.g.
+#   pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu129
+torch==2.8.0
+transformers==5.19.0
+sentence-transformers==6.1.0
+huggingface-hub==1.33.0
+accelerate==1.10.1
+faiss-cpu==1.15.1
+pymupdf==1.28.2
+numpy==2.2.6
+pandas==2.3.2
+matplotlib==3.10.5
+jinja2==3.1.6
+ipykernel==6.30.1

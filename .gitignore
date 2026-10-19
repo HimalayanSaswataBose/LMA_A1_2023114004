@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+# LaTeX build by-products
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Assignment brief (not a deliverable)
+RAG_LMA_Assignment_v1.pdf

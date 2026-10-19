@@ -1,0 +1,9 @@
+case,category,query,gold_chunks,baseline_rank,reranked_rank,rank_change,gold_in_P1_top3,gold_in_P2_top3,P1_context,P2_context
+F1,Negation & constraints (role limit),Can I overbuild an opponent's brewery?,"[43, 53]",10.0,1.0,#10 → #1,False,True,"[52, 34, 44]","[43, 34, 52]"
+F2,Exceptions & corner cases,What happens to level 1 industries at the end of the canal era?,[27],7.0,1.0,#7 → #1,False,True,"[56, 42, 51]","[27, 55, 26]"
+F3,Keyword trap / distractor,Does my income level give victory points at the end of the game?,[55],6.0,1.0,#6 → #1,False,True,"[24, 57, 30]","[55, 24, 57]"
+F4,Keyword trap / synonyms,What happens when the deck runs out of cards?,[21],5.0,1.0,#5 → #1,False,True,"[28, 20, 14]","[21, 28, 20]"
+F5,Buried chunk (rank 4-10 → top-3),Is the general supply of cubes limited?,[16],6.0,3.0,#6 → #3,False,True,"[40, 33, 2]","[32, 43, 16]"
+L1,Limitation: re-ranker demotes the right chunk,Can my opponent use coal from my mine?,[31],1.0,5.0,#1 → #5,True,False,"[31, 32, 52]","[43, 32, 53]"
+L2,Limitation: first-stage recall miss,What do I get for selling to Warrington with beer?,[46],,,#>10 → #>10,False,False,"[34, 44, 15]","[15, 44, 34]"
+L3,Limitation: low-confidence re-ranking,Can I upgrade a factory to a better one?,"[42, 43]",1.0,2.0,#1 → #2,True,True,"[42, 55, 51]","[30, 43, 4]"

@@ -1,0 +1,6 @@
+corpus_size,bi_encoder_query_ms,measured
+59,4.276,True
+1000,4.309,True
+10000,4.591,True
+100000,11.492,True
+1000000,70.792,True

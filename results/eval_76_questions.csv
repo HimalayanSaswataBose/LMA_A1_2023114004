@@ -1,0 +1,77 @@
+query,gold_chunks,rank_p1,rank_p2
+How many actions does each player take on their turn?,[20],1,1
+How many actions do I get on the very first turn of the game?,[20],1,1
+Can I sell my industry tiles to get cash?,"[24, 25]",2,1
+Can I demolish my own buildings to raise money whenever I want?,"[24, 25]",1,1
+What happens if a player goes bankrupt and cannot pay?,"[24, 25]",1,1
+What is the penalty if I cannot pay my negative income?,[25],3,2
+Is there a penalty for going into debt?,[25],2,2
+How do I build a railway between two towns?,"[50, 51]",1,2
+How much does it cost to build railroad tracks?,[51],1,1
+How much does it cost to dig a canal?,[51],1,1
+Can I build rail links during the canal era?,[51],1,1
+Is it forbidden to build canals in the rail era?,[51],1,1
+Can I overbuild an opponent's brewery?,"[43, 53]",10,1
+Can I upgrade a factory to a better one?,[43],5,2
+What happens to resources on my own tile when I overbuild it?,[43],1,1
+Do opponents lose points when their industry is overbuilt?,[43],1,1
+Do I need a connection to buy iron from the Iron Market?,"[33, 53]",1,1
+Is coal from the market available without a connection to a port?,"[32, 53]",1,1
+Must coal come from the nearest mine?,[31],1,1
+Does iron have to come from the closest iron works?,[33],1,1
+Do I have to pay for coal taken from an opponent's coal mine?,[31],2,5
+Do I have to pay for iron from another player's iron works?,[33],1,1
+Can my opponent use coal from my mine?,[31],1,5
+Can I sell coal to the market after the turn I built the mine?,[40],2,2
+Can I sell a coal mine's cubes to the market later?,[40],1,1
+How do I make money from my iron works?,[39],2,2
+Can I use merchant beer to build two rail links?,[52],1,1
+Is a merchant beer allowed when networking with two rails?,[52],1,1
+Do I need to be connected to my own brewery to use its beer?,"[34, 54]",2,1
+Can I buy beer from the market?,[34],1,1
+Can I sell cotton if I have no beer?,"[44, 45]",1,1
+Is beer needed to sell goods?,[44],2,3
+How do I sell my manufactured goods to a market?,[44],1,1
+What do potteries need to be sold?,[44],4,3
+What does the Gloucester merchant bonus do?,[45],1,1
+What do I get for selling to Warrington with beer?,[46],,
+Can I build a level 1 Pottery in the Rail Era?,[54],1,1
+Can I develop a pottery tile with a lightbulb icon?,[50],1,1
+What is a lightbulb icon?,[50],1,1
+Can I remove a lightbulb pottery tile with the Gloucester bonus?,[46],1,1
+Is there a limit on how many loans I can take?,[47],1,1
+Is it allowed to take a loan when my income level is -9?,[47],1,1
+Can I borrow money from the bank?,[47],1,1
+Do I have to repay my debts to the bank?,[47],1,1
+Do I collect income after the last round?,[24],1,1
+What is the maximum income level?,[30],1,1
+Does my income level give victory points at the end of the game?,[55],6,1
+Can I take a Scout action when I already hold a wild card?,"[22, 48]",1,1
+Can I pass instead of taking an action and keep my cards?,[22],2,1
+Which locations have no merchant tiles in a two player game?,[15],1,1
+Can I use a Wild Location card to build a farm brewery?,"[36, 40]",1,1
+Can I build a second link to the farm brewery near Worcester?,[41],1,1
+Can I build a factory on a farm?,[40],1,2
+How many industry tiles can I place in the same town during the canal era?,"[42, 53]",1,1
+Can I build a mill in the same town as another player's mill during the canal period?,[42],2,1
+Can I place more than one industry per town in the railway age?,[42],2,1
+Can I build a coal mine in a location outside my network?,"[36, 54]",7,8
+Is building a cotton mill allowed anywhere on the map?,"[36, 54]",,
+What happens to level 1 industries at the end of the canal era?,[27],7,1
+Do unflipped industries score points?,[26],3,1
+When is a brewery flipped?,[29],2,1
+Do I keep my link tiles after they are scored?,[26],1,1
+How are railways scored?,[26],1,2
+How are canals scored?,[26],1,1
+Can a player go above 100 victory points?,[27],8,4
+Who wins if two players have the same score?,[28],1,1
+When does the game end?,"[19, 26]",1,1
+What happens when the deck runs out of cards?,[21],5,1
+How many cards does each player hold?,"[17, 20]",3,3
+Should I show my cards to other players?,[18],1,1
+How much money does each player start with?,[17],2,4
+Is the general supply of cubes limited?,[16],6,3
+Who controls the order of play?,[23],3,2
+What happens to the money I spend on my turn?,[21],5,2
+Can my opponent's links connect me to a merchant?,[31],,
+Do I need to own the railway line to move goods along it?,[31],,
