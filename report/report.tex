@@ -369,7 +369,6 @@ LLM time per token   & \multicolumn{2}{c}{42--46 ms} \\
 
 As the cross-encoder does a major compute operation per chunk selection, it takes a lot more time for
 retrieval (Table~\ref{tab:latency}, median: 4.28\ra14.24\,ms on GPU, 8.24\ra100.44\,ms on CPU).
-This might become a bottleneck for extremely large documents.
 
 \begin{guide}{Section 3}
 record and tabulate the runtime of the baseline retrieval vs.\ the re-ranking pipeline (Table~\ref{tab:latency}).
