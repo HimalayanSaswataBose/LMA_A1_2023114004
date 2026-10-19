@@ -5,14 +5,9 @@
 %                                    with pdfLaTeX or XeLaTeX)
 %
 %  The tables and figures hold the measured results from the notebook
-%  (results/*.csv). The grey "writing guide" boxes mark where YOUR answers go:
-%  the assignment requires the analysis to be in your own words. Write each
-%  answer under its box, then set \guidesfalse below to hide all the boxes.
+%  (results/*.csv).
 % =============================================================================
 \documentclass[10pt,a4paper]{article}
-
-\newif\ifguides
-\guidesfalse           % writing guides hidden; change to \guidestrue to show them again
 
 \usepackage[a4paper,margin=2cm,top=1.7cm,bottom=1.9cm]{geometry}
 \usepackage{iftex}
@@ -33,14 +28,12 @@
 \usepackage{pifont}
 \usepackage{float}
 \usepackage{enumitem}
-\usepackage{environ}
-\usepackage[most]{tcolorbox}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
 \usepackage[font=small,labelfont=bf,skip=4pt]{caption}
 \usepackage{titlesec}
 \usepackage{csquotes}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks, urlcolor=pone, linkcolor=ink, citecolor=ink]{hyperref}
 
 % ---- colours: same categorical slots as the notebook's charts --------------
 \definecolor{pone}{HTML}{2A78D6}     % Pipeline 1 (bi-encoder)
@@ -48,8 +41,6 @@
 \definecolor{ink}{HTML}{0B0B0B}
 \definecolor{inktwo}{HTML}{52514E}
 \definecolor{muted}{HTML}{898781}
-\definecolor{rulegrey}{HTML}{C3C2B7}
-\definecolor{guidebg}{HTML}{F6F5F1}
 \definecolor{heading}{HTML}{1D3F73}
 
 \titleformat{\section}{\large\bfseries\color{heading}}{\thesection}{0.6em}{}
@@ -69,19 +60,7 @@
 \newcommand{\no}{\ding{55}}           % wrong
 \newcommand{\pmark}{\ding{119}}       % partly correct
 \newcommand{\abst}{\ding{109}}        % declined to answer
-\newcommand{\fillin}[1]{\colorbox{guidebg}{\textcolor{inktwo}{\textit{#1}}}}
 \newcommand{\nb}[1]{\textcolor{inktwo}{\small(nb.\,\S#1)}}   % pointer to a notebook section
-
-% ---- writing-guide boxes (hidden with \guidesfalse) -------------------------
-\tcbset{guidestyle/.style={enhanced, breakable, colback=guidebg, colframe=rulegrey,
-  boxrule=0.5pt, arc=1.5pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
-  fontupper=\small, before skip=5pt, after skip=6pt}}
-\NewEnviron{guide}[1]{\ifguides
-  \begin{tcolorbox}[guidestyle]
-    \textbf{\color{inktwo}Writing guide -- #1.} \textit{Asked:}~\BODY
-  \end{tcolorbox}\fi}
-\newenvironment{evidence}{\par\smallskip\textit{Evidence from this project to draw on:}%
-  \begin{itemize}[leftmargin=1.1em,label=\textcolor{muted}{\textbullet}]}{\end{itemize}}
 
 \begin{document}
 
@@ -102,8 +81,9 @@
 \centering\footnotesize
 \begin{tabularx}{\textwidth}{@{}>{\bfseries}p{2.25cm}X@{}}
 \toprule
-Repository & \texttt{RAG\_Baseline\_vs\_ReRanking.ipynb} (one commented notebook, saved with all outputs),
+Repository & \url{https://github.com/HimalayanSaswataBose/LMA_A1_2023114004}: \texttt{RAG\_Baseline\_vs\_ReRanking.ipynb} (one commented notebook, saved with all outputs),
              \texttt{results/} (10 CSV/JSON tables and 2 charts written by the notebook),
+             \texttt{report/} (this report), \texttt{doc.pdf} (the rulebook),
              \texttt{README.md}, \texttt{requirements.txt} (pinned versions). \\
 Document   & \textit{Brass: Birmingham} rulebook v2018.11 (Roxley), 12 PDF pages, 2--4 text columns per page;
              parsed with PyMuPDF into 299 text blocks in reading order \nb{2}. \\
@@ -174,19 +154,6 @@ A bi-encoder encodes the chunk and the query independently and obtains the requi
 similarity, whereas a cross-encoder takes the query and chunk together as input and runs joint self-attention
 to output a relevance score. The top 3 chunks by that score are passed to the LLM, and the LLM writes the
 answer (Fig.~\ref{fig:arch}).
-
-\begin{guide}{Section 1}
-the core difference between a bi-encoder (independent embeddings, cosine similarity)
-and a cross-encoder (joint self-attention across tokens).
-\begin{evidence}
-  \item Bi-encoder \nb{4}: the 59 chunks were embedded once into a 59\,$\times$\,384 matrix (0.24\,s);
-        each query then needs one encoder pass (4.3\,ms GPU) and a 0.02\,ms FAISS search.
-        Cosine scores seen in the top-10 lists: 0.17--0.60. Input limit 256 tokens (chunk 1, 311 tokens, is truncated).
-  \item Cross-encoder \nb{5}: nothing is stored; each of the 10 (query, chunk) pairs is one forward pass returning a
-        single relevance logit (seen: $-11.4$ to $+7.4$); 9.7\,ms for 10 pairs on GPU.
-  \item Both are 6-layer MiniLM models with $\approx$22.7\,M parameters and 384-d hidden states.
-\end{evidence}
-\end{guide}
 
 % =============================================================================
 \section{Qualitative and rank-shift analysis}
@@ -314,21 +281,6 @@ in top-3 under both / neither & 59 / 6 \\
 \end{tabular}
 \end{table}
 
-\begin{guide}{Section 2}
-document the rank changes for the failure queries, and compare Answer 1 vs.\ Answer 2: did the baseline
-hallucinate, omit an essential clause or misstate a rule because the critical chunk sat outside the top 3?
-\begin{evidence}
-  \item Table~\ref{tab:ranks} / Fig.~\ref{fig:ranks}: every F-case gold chunk starts at rank 5--10 and ends in the top-3; F1 moves furthest (\#10\ra\#1).
-  \item Table~\ref{tab:answers}, F1--F5: Answer 1 declines (F1), states the wrong rule (F2), is partly wrong (F4) and invents
-        cube counts (F5); in F3 it is Answer 2 that is wrong.
-  \item F3: chunk 55 (``income level \dots{} is not worth VPs'') reaches \#1, but chunk 57 (introductory-game scoring) is still in the P2 context.
-  \item L1: chunk 31 (coal from a mine ``owned by any player'') drops \#1\ra\#5; the cross-encoder ranks chunk 43 (Overbuilding) and 32 (Coal Market) above it.
-  \item L2: chunk 46 (Warrington's \pounds 5 bonus) is in neither top-10, so both pipelines see the same three chunks in a different order.
-  \item L3: all ten cross-encoder logits lie between $-10.67$ and $-11.40$; in F1--F3 the top logit is $+3.4$ to $+6.9$.
-  \item Table~\ref{tab:eval}: Hit@3 rises 0.816\ra0.882 (8 in, 3 out); Recall@10 is unchanged.
-\end{evidence}
-\end{guide}
-
 % =============================================================================
 \section{Latency profiling}
 
@@ -370,15 +322,6 @@ LLM time per token   & \multicolumn{2}{c}{42--46 ms} \\
 As the cross-encoder does a major compute operation per chunk selection, it takes a lot more time for
 retrieval (Table~\ref{tab:latency}, median: 4.28\ra14.24\,ms on GPU, 8.24\ra100.44\,ms on CPU).
 
-\begin{guide}{Section 3}
-record and tabulate the runtime of the baseline retrieval vs.\ the re-ranking pipeline (Table~\ref{tab:latency}).
-\begin{evidence}
-  \item Re-ranking adds about 10\,ms per query on the GPU and about 92\,ms on the CPU.
-  \item Retrieval as a share of end-to-end time: 6.0/2294.6 = 0.26\,\% (P1) and 15.9/2027.1 = 0.78\,\% (P2).
-  \item P2's total is lower here while its answers average 46.0 tokens vs.\ 52.8 for P1, at 42--46\,ms per token.
-\end{evidence}
-\end{guide}
-
 % =============================================================================
 \section{Scaling question}
 
@@ -414,16 +357,5 @@ cross-encoder-only system would. Sources: \texttt{results/scaling\_*.csv}.}
 There is too much latency (time taken) if the cross-encoder is run over the full collection: for 1\,M chunks
 about 7.7\,min per query on GPU and 2.4\,h on CPU (extrapolated), against 70.8\,ms for bi-encoder + FAISS
 search (Fig.~\ref{fig:scaling}).
-
-\begin{guide}{Section 4}
-why we do not simply run a cross-encoder across the entire document collection from the very start.
-\begin{evidence}
-  \item Fig.~\ref{fig:scaling}: per-query cross-encoder cost grows linearly with $N$ (7.7\,min per query on GPU and 2.4\,h on CPU at 1\,M chunks),
-        against 70.8\,ms for query embedding + exact FAISS search.
-  \item The bi-encoder's chunk vectors cost 0.55\,ms per chunk, paid once at indexing time; Table~\ref{tab:latency} shows the per-query part.
-  \item For this 59-chunk rulebook, scoring every chunk takes 78\,ms on GPU.
-  \item First-stage Recall@10 = 0.947 (Table~\ref{tab:eval}): the share of questions whose gold chunk reaches the re-ranker at all.
-\end{evidence}
-\end{guide}
 
 \end{document}
