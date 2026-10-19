@@ -11,3 +11,6 @@ __pycache__/
 
 # Assignment brief (not a deliverable)
 RAG_LMA_Assignment_v1.pdf
+
+# Claude Code worktrees
+.claude/

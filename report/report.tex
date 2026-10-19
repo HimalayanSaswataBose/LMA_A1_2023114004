@@ -12,7 +12,7 @@
 \documentclass[10pt,a4paper]{article}
 
 \newif\ifguides
-\guidestrue            % <- change to \guidesfalse once your answers are written
+\guidesfalse           % writing guides hidden; change to \guidestrue to show them again
 
 \usepackage[a4paper,margin=2cm,top=1.7cm,bottom=1.9cm]{geometry}
 \usepackage{iftex}
@@ -170,7 +170,10 @@ They differ only in how the three chunks given to the LLM are chosen.}
 % =============================================================================
 \section{Architecture comparison}
 
-% TODO: write your answer here, in your own words.
+A bi-encoder encodes the chunk and the query independently and obtains the required chunk using cosine
+similarity, whereas a cross-encoder takes the query and chunk together as input and runs joint self-attention
+to output a relevance score. The top 3 chunks by that score are passed to the LLM, and the LLM writes the
+answer (Fig.~\ref{fig:arch}).
 
 \begin{guide}{Section 1}
 the core difference between a bi-encoder (independent embeddings, cosine similarity)
@@ -263,6 +266,31 @@ L3 & \ok~\enquote{Yes \dots{} Overbuilding allows you to replace an already plac
 
 \begin{table}[H]
 \centering\footnotesize
+\caption{Summary of Tables~\ref{tab:ranks} and~\ref{tab:answers}. Answer marks as in Table~\ref{tab:answers};
+the last column classifies the baseline's error for the failure queries.}
+\label{tab:summary}
+\begin{tabular}{@{}llcccl@{}}
+\toprule
+Case & Failure type & Gold rank, P1\ra P2 & Answer 1 & Answer 2 & Baseline error \\
+\midrule
+F1 & Negation / role limit & \#10\ra\#1 & \abst & \ok & omitted clause \\
+F2 & Exception             & \#7\ra\#1  & \no   & \ok & misstated rule \\
+F3 & Keyword trap          & \#6\ra\#1  & \ok   & \no & none (Answer 1 correct) \\
+F4 & Synonyms              & \#5\ra\#1  & \pmark & \ok & misstated rule \\
+F5 & Buried chunk          & \#6\ra\#3  & \no   & \ok & hallucination \\
+\midrule
+L1 & Re-ranker demotes     & \#1\ra\#5  & \ok   & \no   & -- \\
+L2 & First-stage miss      & ${>}10$\ra${>}10$ & \no & \abst & -- \\
+L3 & Low CE confidence     & \#1\ra\#2  & \ok   & \abst & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Baseline answer errors (Table~\ref{tab:summary}): F1 omitted clause, F2 misstated rule, F4 misstated rule,
+F5 hallucination.
+
+\begin{table}[H]
+\centering\footnotesize
 \caption{Retrieval quality over the 76 labelled questions \nb{9}. Hit@$k$: gold chunk within the top $k$;
 MRR@10: mean of 1/rank. Right: where the gold chunk landed relative to the LLM's top-3.}
 \label{tab:eval}
@@ -285,8 +313,6 @@ in top-3 under both / neither & 59 / 6 \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-% TODO: write your answer here, in your own words.
 
 \begin{guide}{Section 2}
 document the rank changes for the failure queries, and compare Answer 1 vs.\ Answer 2: did the baseline
@@ -341,7 +367,9 @@ LLM time per token   & \multicolumn{2}{c}{42--46 ms} \\
 \end{tabular}
 \end{table}
 
-% TODO: write your answer here, in your own words.
+As the cross-encoder does a major compute operation per chunk selection, it takes a lot more time for
+retrieval (Table~\ref{tab:latency}, median: 4.28\ra14.24\,ms on GPU, 8.24\ra100.44\,ms on CPU).
+This might become a bottleneck for extremely large documents.
 
 \begin{guide}{Section 3}
 record and tabulate the runtime of the baseline retrieval vs.\ the re-ranking pipeline (Table~\ref{tab:latency}).
@@ -384,7 +412,9 @@ cross-encoder-only system would. Sources: \texttt{results/scaling\_*.csv}.}
 \label{fig:scaling}
 \end{figure}
 
-% TODO: write your answer here, in your own words.
+There is too much latency (time taken) if the cross-encoder is run over the full collection: for 1\,M chunks
+about 7.7\,min per query on GPU and 2.4\,h on CPU (extrapolated), against 70.8\,ms for bi-encoder + FAISS
+search (Fig.~\ref{fig:scaling}).
 
 \begin{guide}{Section 4}
 why we do not simply run a cross-encoder across the entire document collection from the very start.
